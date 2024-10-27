@@ -3,6 +3,9 @@
  * get single breed image: https://dog.ceo/api/breed/{breed}/images/random
  */
 
+// DOM Selection
+const selectEl = document.querySelector("#dog-breeds");
+
 // This function returns [breeds]
 function getDogsBreed() {
   return fetch(`https://dog.ceo/api/breeds/list/all`)
@@ -11,10 +14,14 @@ function getDogsBreed() {
     .catch((err) => console.log(err));
 }
 
+// Renders the <option>
 function renderOptions() {
   getDogsBreed().then((breeds) => {
     for (let breed of breeds) {
-      console.log(breed);
+      const option = document.createElement("option");
+      option.textContent = breed[0].toUpperCase() + breed.slice(1);
+      option.value = breed;
+      selectEl.appendChild(option);
     }
   });
 }
