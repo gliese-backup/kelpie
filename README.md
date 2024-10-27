@@ -1,5 +1,11 @@
 # Learnings
 
+API: To get some data, we used the dogs api
+rules:
+to get data we used fetch
+i. will delay (.then and promises)
+ii. errors will come (catch)
+
 1. Promise? It means a future value
 2. Async? Means parallel and non-blocking action
 3. To work with promises we use .then and .catch
@@ -11,14 +17,14 @@
 0. Basics of Network Requests: takes time & errors might occur
    i. We can use fetch to get some data
    ii. To work with async code we use Promises (JS Feature)
-   iii. JSON parse (to read and convert)
+   iii. JSON parse (to read and convert) res.json()
    iv. To work with promises we use .then and .catch
    v. The fetch function gives us a Promise
-1. We explored the dogs api which includes several end points
+1. We explored the dogs api which includes several endpoints
 2. CRUD (Create, Read, Update, Delete) on Create Get
 3. Explored the vite bundler
 4. Difference b/w npm vs pnpm vs yarn
-5. `pnpm create vite@latest` . (in our current directory)
+5. `pnpm create vite@latest .` (in our current directory)
    Vanilla with JavaScript
    Scaffold (basic project)
 6. `pnpm install` to install all the dependencies
