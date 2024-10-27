@@ -14,6 +14,15 @@ function getDogsBreed() {
     .catch((err) => console.log(err));
 }
 
+function getDogImage(breed) {
+  return fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
+    .then((res) => res.json())
+    .then((data) => data.message)
+    .catch((err) => console.log(err));
+}
+
+getDogImage("husky");
+
 // Renders the <option>
 function renderOptions() {
   getDogsBreed().then((breeds) => {
