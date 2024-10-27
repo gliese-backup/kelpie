@@ -11,4 +11,12 @@ function getDogsBreed() {
     .catch((err) => console.log(err));
 }
 
-getDogsBreed();
+function renderOptions() {
+  getDogsBreed().then((breeds) => {
+    for (let breed of breeds) {
+      console.log(breed);
+    }
+  });
+}
+
+renderOptions();
